@@ -3,6 +3,7 @@ var eejs = require('ep_etherpad-lite/node/eejs');
 
 exports.expressCreateServer = function (hook_name, args, cb) {
 
+
   //serve index.html under /
   args.app.get('/', function(req, res)
   {

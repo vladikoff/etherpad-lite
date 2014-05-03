@@ -56,4 +56,10 @@ exports.expressCreateServer = function (hook_name, args, cb) {
     res.write(JSON.stringify({"plugins": clientPlugins, "parts": clientParts}));
     res.end();
   });
+
+args.app.use(function(req, res, next){
+  res.redirect('/p' + req.url);
+});
+
+
 }
